@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nearby Hospitals - Rural Healthcare AI Bot</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+    body{ margin:0; padding:0; font-family:'Poppins',sans-serif; background:linear-gradient(135deg,#0f2027,#203a43,#2c5364); color:#e0e7ff; }
+    header{ background:rgba(8,45,77,0.9); padding:1.5rem; color:#00ffc8; font-family:'Courier New',monospace; font-weight:700; font-size:1.8rem; text-align:center; text-shadow:0 0 6px #00ffc8; position:sticky; top:0; z-index:100; }
+    nav{ text-align:center; margin:1rem 0; }
+    nav a{ color:#00ffc8; margin:0 0.8rem; text-decoration:none; font-weight:600; font-size:1.1rem; }
+    nav a:hover{ color:#00a68f; text-decoration:underline; }
+    main{ max-width:900px; margin:2rem auto; background:rgba(8,45,77,0.8); border-radius:12px; padding:1.8rem 2rem; box-shadow:0 10px 30px rgba(0,255,200,0.3); border:1px solid #00ffc8; }
+    h2{ font-family:'Courier New',monospace; color:#00ffc8; font-size:2rem; margin-bottom:1.5rem; border-bottom:3px solid #00ffc8; padding-bottom:0.3rem; text-shadow:0 0 6px #00ffc8; }
+    #map iframe{ width:100%; height:300px; border:0; border-radius:12px; }
+    #map{ border:1px solid #00ffc8; box-shadow: inset 0 0 20px rgba(0,255,200,0.3); border-radius:12px; margin-bottom:1.8rem; }
+    ul{ list-style:none; padding-left:0; }
+    li{ padding:1rem; background:rgba(0,255,200,0.1); margin-bottom:1rem; border-radius:10px; color:#b5f8e8; font-weight:600; box-shadow:0 3px 10px rgba(0,255,200,0.15); }
+  </style>
+</head>
+<body>
+
+<header>Nearby Hospitals - Rural Healthcare AI Bot</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="chat.html">Chat</a>
+  <a href="nearby.html">Nearby Hospitals</a>
+  <a href="doctor-connect.html">Doctor Connect</a>
+  <a href="language.html">Language</a>
+</nav>
+
+<main>
+  <h2>Nearest Government Primary Health Centres (PHCs)</h2>
+  <div id="map">
+    <iframe src="https://www.google.com/maps?q=government%20hospital%20near%20me&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <ul>
+    <li>Government Primary Health Centre, Village A — 3 km</li>
+    <li>Rural Health Clinic, Town B — 5 km</li>
+    <li>Community Health Centre, Village C — 7 km</li>
+    <li>District Hospital, City D — 15 km</li>
+  </ul>
+</main>
+
+</body>
+</html>
+

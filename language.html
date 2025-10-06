@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Language Switcher - Rural Healthcare AI Bot</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #e0e7ff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      padding: 2rem 1rem;
+      box-sizing: border-box;
+    }
+    header {
+      background: rgba(8,45,77,0.9);
+      width: 100%;
+      padding: 1.5rem 1rem;
+      color: #00ffc8;
+      font-family: 'Courier New', monospace;
+      font-weight: 700;
+      font-size: 1.8rem;
+      text-align: center;
+      text-shadow: 0 0 6px #00ffc8;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav {
+      text-align: center;
+      margin: 1rem 0;
+    }
+    nav a {
+      color: #00ffc8;
+      margin: 0 0.8rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #00a68f;
+      text-decoration: underline;
+    }
+    .lang-btns {
+      margin: 2rem 0 1.5rem;
+      display: flex;
+      gap: 1rem;
+    }
+    button {
+      padding: 0.8rem 1.8rem;
+      font-size: 1.1rem;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      background: #00ffc8;
+      color: #002f2f;
+      box-shadow: 0 0 15px #00ffc8;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #00a68f;
+      color: #001f17;
+      box-shadow: 0 0 30px #00a68f;
+    }
+    #content {
+      background: rgba(8, 45, 77, 0.85);
+      border-radius: 12px;
+      padding: 2rem;
+      width: 100%;
+      max-width: 700px;
+      font-size: 1.3rem;
+      font-weight: 400;
+      line-height: 1.6;
+      text-align: center;
+      box-shadow: 0 12px 30px rgba(0,255,200,0.3);
+      border: 1px solid #00ffc8;
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<header>Language Switcher - Rural Healthcare AI Bot</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="chat.html">Chat</a>
+  <a href="nearby.html">Nearby Hospitals</a>
+  <a href="doctor-connect.html">Doctor Connect</a>
+  <a href="language.html">Language</a>
+</nav>
+
+<div class="lang-btns">
+  <button onclick="switchLang('en')" aria-label="Switch to English">English</button>
+  <button onclick="switchLang('mr')" aria-label="Switch to Marathi">मराठी</button>
+  <button onclick="switchLang('hi')" aria-label="Switch to Hindi">हिन्दी</button>
+</div>
+
+<div id="content" aria-live="polite" aria-atomic="true">
+  Welcome to Rural Healthcare AI Bot. How can we assist you with your healthcare needs today?
+</div>
+
+<script>
+  const content = {
+    en: "Welcome to Rural Healthcare AI Bot. How can we assist you with your healthcare needs today?",
+    mr: "ग्रामीण आरोग्य एआय बॉट मध्ये आपले स्वागत आहे. आज आम्ही आपल्याला आरोग्य सेवांबद्दल कसे मदत करू शकतो?",
+    hi: "ग्रामीण स्वास्थ्य एआई बोट में आपका स्वागत है। हम आज आपकी स्वास्थ्य जरूरतों में आपकी कैसे मदद कर सकते हैं?"
+  };
+
+  function switchLang(lang) {
+    document.getElementById('content').textContent = content[lang];
+  }
+</script>
+
+</body>
+</html>
+

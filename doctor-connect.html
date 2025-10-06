@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doctor Connect - Rural Healthcare AI Bot</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #e0e7ff;
+    }
+    header {
+      background: rgba(8,45,77,0.9);
+      padding: 1.5rem;
+      color: #00ffc8;
+      font-family: 'Courier New', monospace;
+      font-weight: 700;
+      font-size: 1.8rem;
+      text-align: center;
+      text-shadow: 0 0 6px #00ffc8;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav {
+      text-align: center;
+      margin: 1rem 0;
+    }
+    nav a {
+      color: #00ffc8;
+      margin: 0 0.8rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #00a68f;
+      text-decoration: underline;
+    }
+    main {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: rgba(8,45,77,0.8);
+      border-radius: 12px;
+      padding: 2rem 2.5rem;
+      box-shadow: 0 10px 30px rgba(0,255,200,0.3);
+      border: 1px solid #00ffc8;
+    }
+    h2 {
+      font-family: 'Courier New', monospace;
+      color: #00ffc8;
+      font-size: 2rem;
+      margin-bottom: 1.8rem;
+      border-bottom: 3px solid #00ffc8;
+      padding-bottom: 0.4rem;
+      text-shadow: 0 0 6px #00ffc8;
+      text-align: center;
+    }
+    form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      border-radius: 8px;
+      border: 1px solid #00b080;
+      margin-bottom: 1.4rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      resize: vertical;
+      background: #002a2f;
+      color: #a3fff7;
+    }
+    form button {
+      background: linear-gradient(120deg, #00ffc8, #00a68f);
+      color: #00352e;
+      font-weight: 700;
+      padding: 0.8rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 15px #00ffc8;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+    }
+    form button:hover {
+      background: linear-gradient(120deg, #00a68f, #00ffc8);
+      box-shadow: 0 0 30px #00fff0;
+      color: #001f17;
+    }
+    .btn-home {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.5rem;
+      background: #00ffc8;
+      color: #002f2f;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 0 15px #00ffc8;
+      transition: background 0.3s ease;
+      text-align: center;
+    }
+    .btn-home:hover {
+      background: #00a68f;
+      color: #001f17;
+      box-shadow: 0 0 30px #00a68f;
+    }
+  </style>
+</head>
+<body>
+
+<header>Doctor Connect - Book a Free Consultation</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="chat.html">Chat</a>
+  <a href="nearby.html">Nearby Hospitals</a>
+  <a href="doctor-connect.html">Doctor Connect</a>
+  <a href="language.html">Language</a>
+</nav>
+
+<main>
+  <h2>Book a Free Consultation</h2>
+  <form id="consultForm">
+    <label for="fullname">Full Name *</label>
+    <input type="text" id="fullname" name="fullname" placeholder="Your full name" required />
+
+    <label for="phone">Phone Number *</label>
+    <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" pattern="[0-9]{10}" required />
+
+    <label for="preferredDate">Preferred Consultation Date *</label>
+    <input type="date" id="preferredDate" name="preferredDate" required />
+
+    <label for="healthIssue">Describe your health issue *</label>
+    <textarea id="healthIssue" name="healthIssue" rows="4" placeholder="Brief description" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+  <a href="index.html" class="btn-home" aria-label="Go back to Home">Back to Home</a>
+</main>
+
+<script>
+  document.getElementById('consultForm').addEventListener('submit', e => {
+    e.preventDefault();
+    alert('Your consultation request has been received. We will contact you soon.');
+    e.target.reset();
+  });
+</script>
+
+</body>
+</html>
+
